@@ -34,12 +34,12 @@ public class SailorCoconutDriver {
 		
 		
 		System.out.println("");
-		int sailors = 5;
-		int coconuts = 1021;
+		int sailors = 3;
+		int coconuts = 25;
 		
 		Boolean isGoodValue;
 		isGoodValue = 
-				SailorCoconuts.testCoconuts(sailors, sailors - 1, coconuts);
+				SailorCoconuts.testCoconuts(sailors, sailors, coconuts);
 		
 		if(isGoodValue)
 			System.out.println("SUCCESS!!! " + sailors + " sailors and " 

@@ -43,33 +43,50 @@ public class SailorCoconuts {
 		else if(sailors == 0)
 			return false;
 		
+		/* This is only disabled to show that the recursive method does not 
+		 * allow too low values, otherwise it would defeat the purpose of
+		 * 0)b.
 		// first time in checks if coconuts is at-least minimum valid value
 		if(sailorsSleeping + 1 == sailors
-				&& coconuts < Math.pow(sailors, sailors + 1) - sailors + 1)
-			return false; // too few coconuts to be valid
+				&& coconuts < SailorCoconuts.minValidCoconutsEquation(sailors))
+			return false; // too few coconuts to be valid*/
 		
 		// I would put a condition right here to check if the amount of
 		// coconuts is equal to the min valid amount, but that would
 		// defeat the purpose of question 0)b
 		
-		coconuts--; // give one coconut to the monkey
-		
 		// the amount of coconuts that each sailor would get
 		int coconutShare = coconuts / sailors;
 		
-		// if coconuts did not divide evenly
-		if(coconutShare * sailors != coconuts)
-			return false;
-		
-		// checks if all sailors have already woken up at some point and 
-		// hid some coconuts, so it is over
-		if(sailorsSleeping == 0)
-			return true;
+		// after all sailors have already woken up and hid theirs
+		if(sailorsSleeping == -1){
+			// if all coconuts are gone next round
+			if(coconuts - (sailors * coconutShare) - 1 == 0){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		// the current sailor doing his/her work
+		else{
+			// coconuts could not be divided among the sailors
+			if(coconutShare == 0)
+				return false;
+			
+			// the amount of coconuts left over after being split by the pirates
+			int leftOver = coconuts - (coconutShare * sailors);
+			
+			if(leftOver != 1)
+				return false;
+			
+			coconuts = coconuts - coconutShare - 1;
+		}
 		
 		// time for the next sailor to wake up and be naughty, the sailor 
 		// in this iteration of recursion buried his/her coconut share, 
 		// so that amount is subtracted from the coconuts for the next sailor
-		return testCoconuts(sailors, --sailorsSleeping, coconuts - coconutShare);
+		return testCoconuts(sailors, --sailorsSleeping, coconuts);
 	}
 	
 	
