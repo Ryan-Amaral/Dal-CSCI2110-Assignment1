@@ -4,8 +4,12 @@ package coconuts;
  * This class is the driver class for a program which determines validity 
  * of solutions of the sailor coconut problem.
  * 
+ * First it shows the minimum amount of required coconuts for a given 
+ * amount of sailors using an efficient equation. Then it does the same
+ * using the recursive function repeatedly. Then it shows some samples of
+ * output for some sailor and coconut values.
  * 
- * @author Ryan
+ * @author Ryan Amaral
  *
  */
 public class SailorCoconutDriver {
@@ -33,20 +37,23 @@ public class SailorCoconutDriver {
 		
 		
 		
-		System.out.println("");
-		int sailors = 3;
-		int coconuts = 25;
+		System.out.println("\nSome sample values below:");
+		int sailors = 2;
+		int[] coconutAmounts = {6,7,8,9,14,15,16,17,22,23};
 		
 		Boolean isGoodValue;
-		isGoodValue = 
-				SailorCoconuts.testCoconuts(sailors, sailors, coconuts);
 		
-		if(isGoodValue)
-			System.out.println("SUCCESS!!! " + sailors + " sailors and " 
-					+ coconuts + " coconuts is valid!" );
-		else
-			System.out.println("FAILURE!!! " + sailors + " sailors and " 
-					+ coconuts + " coconuts is not valid!" );
+		for(int i = 0; i < coconutAmounts.length; i++){
+			isGoodValue = 
+					SailorCoconuts.testCoconuts(sailors, sailors - 1, coconutAmounts[i]);
+			
+			if(isGoodValue)
+				System.out.println("SUCCESS!!! " + sailors + " sailors and " 
+						+ coconutAmounts[i] + " coconuts is valid!" );
+			else
+				System.out.println("FAILURE!!! " + sailors + " sailors and " 
+						+ coconutAmounts[i] + " coconuts is not valid!" );
+		}
 	}
 
 }

@@ -2,11 +2,9 @@ package coconuts;
 
 /**
  * Class SailorCoconuts helps to find what amount of sailors and coconuts
- * are valid for the  pirate coconut problem.
+ * are valid for the  sailor coconut problem.
  * 
- * 
- * 
- * @author Ryan
+ * @author Ryan Amaral
  *
  */
 public class SailorCoconuts {
@@ -16,13 +14,23 @@ public class SailorCoconuts {
 	 * Recursively checks whether the given amount of sailors and coconuts
 	 * are valid quantities for sailor coconut problem. I would have liked
 	 * to have made each of the variables unsigned, but apparently that is
-	 * not a thing in Java. Each iteration through...
+	 * not a thing in Java. 
+	 * 
+	 * Each iteration through the current sailor will split the coconuts 
+	 * evenly for each sailor, and there should be one left, which is 
+	 * given to a monkey. Then the sailor buries his/her pile and puts 
+	 * the rest of the coconuts back together. The rest of the sailors 
+	 * do the same on their own turns. After all sailors have done this,
+	 * there should be enough coconuts to evenly split among them with
+	 * exactly one left over for the monkey. If any of this is not the 
+	 * case, the function returns false.
 	 * 
 	 * @param sailors -> The total amount of sailors on the island.
 	 * @param sailorsSleeping -> The amount of sailors that have not yet
 	 *  woken up to mess with the coconuts. Works as the index. Starts at
 	 *  sailors - 1 because this function starts with the first sailor 
-	 *  being awake and ends when sailorsSleeping == 0.
+	 *  being awake and ends when sailorsSleeping == -1, which signifies
+	 *  when all of the sailors have woken up.
 	 * @param coconuts -> The total amount of coconuts, starts off as the 
 	 *  amount before a sailor messes with them.
 	 * @return True if the amount of coconuts works for the given amount 
@@ -43,7 +51,8 @@ public class SailorCoconuts {
 		else if(sailors == 0)
 			return false;
 		
-		/* This is only disabled to show that the recursive method does not 
+		/* NOTEABLE FEATURE RIGHT HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		 * This is only disabled to show that the recursive method does not 
 		 * allow too low values, otherwise it would defeat the purpose of
 		 * 0)b.
 		// first time in checks if coconuts is at-least minimum valid value
@@ -74,18 +83,18 @@ public class SailorCoconuts {
 			if(coconutShare == 0)
 				return false;
 			
-			// the amount of coconuts left over after being split by the pirates
+			// the amount of coconuts left over after being split by the sailors
 			int leftOver = coconuts - (coconutShare * sailors);
 			
+			// monkey did not get share, return false
 			if(leftOver != 1)
 				return false;
 			
+			// subract the sailor's buried pile and the monkey's one coconut.
 			coconuts = coconuts - coconutShare - 1;
 		}
 		
-		// time for the next sailor to wake up and be naughty, the sailor 
-		// in this iteration of recursion buried his/her coconut share, 
-		// so that amount is subtracted from the coconuts for the next sailor
+		// time for the next sailor to wake up and be naughty
 		return testCoconuts(sailors, --sailorsSleeping, coconuts);
 	}
 	
@@ -116,10 +125,7 @@ public class SailorCoconuts {
 	 * 
 	 * @param sailors -> The amount of sailors in the problem.
 	 * @return Returns the amount of coconuts that is the minimum
-	 *  required amount for the given number of sailors. This one returns
-	 *  an integer as opposed to the other min function because the 
-	 *  recursive function only accepts an int amount of coconuts.
-	 *  Returns -1 if no solution found.
+	 *  required amount for the given number of sailors.
 	 */
 	public static int minValidCoconutsIteration(int sailors){
 		

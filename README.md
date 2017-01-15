@@ -30,4 +30,14 @@ Minimum coconuts required for the given amount of sailors (using recursive metho
 7 sailors requre at-least 5764795 coconuts.
 8 sailors requre at-least 134217721 coconuts.
 
-FAILURE!!! 5 sailors and 1021 coconuts is not valid!</pre>
+Some sample values below:
+FAILURE!!! 2 sailors and 6 coconuts is not valid!
+SUCCESS!!! 2 sailors and 7 coconuts is valid!
+FAILURE!!! 2 sailors and 8 coconuts is not valid!
+FAILURE!!! 2 sailors and 9 coconuts is not valid!
+FAILURE!!! 2 sailors and 14 coconuts is not valid!
+SUCCESS!!! 2 sailors and 15 coconuts is valid!
+FAILURE!!! 2 sailors and 16 coconuts is not valid!
+FAILURE!!! 2 sailors and 17 coconuts is not valid!
+FAILURE!!! 2 sailors and 22 coconuts is not valid!
+SUCCESS!!! 2 sailors and 23 coconuts is valid!</pre>
