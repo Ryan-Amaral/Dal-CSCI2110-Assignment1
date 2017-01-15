@@ -2,7 +2,14 @@ package flights;
 
 
 /**
+ * This class represents a flight at an airport. It has the basic details
+ * of the flight including the number, origin, destination, and departure 
+ * time/date.
  * 
+ * Assumptions/Restrictions: None.
+ * 
+ * Noteworthy Features: Filled in default data in default constructor to 
+ * avoid NREs.
  * 
  * @author Ryan
  *
@@ -66,10 +73,24 @@ public class Flight {
 		this.departure = departure;
 	}
 	
+	/**
+	 * Creates a flight object filled with default values.
+	 */
 	public Flight(){
-		
+		setFlightNumber(-1); // -1 if no number (secret mission or something)
+		setOrigin("Unknown");
+		setDestination("Unknown");
+		setDeparture("00/00/0000 00:00 AM");
 	}
 	
+	/**
+	 * Creates a flight object with the specified values.
+	 * 
+	 * @param flightNumber -> The number/id of the flight.
+	 * @param origin -> Where the flight is leaving from.
+	 * @param destination -> Where the flight is going to.
+	 * @param departure -> When the flight is leaving.
+	 */
 	public Flight(int flightNumber, String origin, String destination, String departure){
 		setFlightNumber(flightNumber);
 		setOrigin(origin);

@@ -1,7 +1,8 @@
 Assignment 1 for CSCI 2110 (Computer Science 3 / Data Structures).
 
 Sample output (work in progress):
-<pre>Minimum coconuts required for the given amount of sailors (using equation)
+<pre>
+Minimum coconuts required for the given amount of sailors (using equation) (-1 means no solution)
 0 sailors requre at-least 1 coconuts.
 1 sailors requre at-least -1 coconuts.
 2 sailors requre at-least 7 coconuts.
@@ -19,7 +20,7 @@ Sample output (work in progress):
 14 sailors requre at-least 155568095557812211 coconuts.
 15 sailors requre at-least 6568408355712890866 coconuts.
 
-Minimum coconuts required for the given amount of sailors (using recursive method repeatedly)
+Minimum coconuts required for the given amount of sailors (using recursive method repeatedly) (-1 means no solution)
 0 sailors requre at-least 1 coconuts.
 1 sailors requre at-least -1 coconuts.
 2 sailors requre at-least 7 coconuts.

@@ -17,7 +17,7 @@ public class SailorCoconutDriver {
 	public static void main(String[] args) {
 		
 		System.out.println("Minimum coconuts required for the given amount "
-				+ "of sailors (using equation)");
+				+ "of sailors (using equation) (-1 means no solution)");
 		// prints the minimum amount of coconuts needed for each amount of
 		// sailors, only goes to 15 because it overflows long datatype
 		for(int s = 0; s < 16; s++)
@@ -27,7 +27,8 @@ public class SailorCoconutDriver {
 		System.out.println();
 		
 		System.out.println("Minimum coconuts required for the given amount "
-				+ "of sailors (using recursive method repeatedly)");
+				+ "of sailors (using recursive method repeatedly) "
+				+ "(-1 means no solution)");
 		// prints the minimum amount of coconuts needed for each amount of
 		// sailors as obtained from iteratively accessing the recursive 
 		// function, only goes to 8 as int overflows
