@@ -1,6 +1,6 @@
 <h2>Assignment 1 for CSCI 2110 (Computer Science 3 / Data Structures).</h2>
 
-<p>This assignment is broken into 3 parts. The sailor coconut problem, a basic airport ticket program, and a calendar printer</p>
+<p>This assignment is broken into 3 parts. The sailor coconut problem, a basic airport ticket program, and a calendar printer.</p>
 
 <h3>The Sailor Coconut Problem</h3>
 
@@ -73,7 +73,7 @@ SUCCESS!!! 2 sailors and 23 coconuts is valid!</pre>
 
 <h3>The Airport Ticket System</h3>
 
-<p>This program has nothing special in it, it just has basic functionality and does nothing exciting</p>
+<p>This program has nothing special in it, it just has basic functionality and does nothing exciting.</p>
 
 Sample output:
 <pre>
@@ -125,3 +125,35 @@ Ryan, Flight 128, Washington to Lisbon, 04/01/2017 05:00 PM, $204.69
 Out of curiosity, lets see what a default flight looks like:
 Flight -1, Unknown to Unknown, 01/01/2017 00:00 AM
 Noice</pre>
+
+<h3>The Calendar</h3>
+
+<p>This program prints out a text based calendar, with the desired dimensions (of months) and short or long month names.</p>
+
+Sample output:
+<pre>
+Calendar for 2017
+      January                February                March                  April           
+ S  M  T  W  T  F  S    S  M  T  W  T  F  S    S  M  T  W  T  F  S    S  M  T  W  T  F  S   
+ 1  2  3  4  5  6  7             1  2  3  4             1  2  3  4                      1   
+ 8  9 10 11 12 13 14    5  6  7  8  9 10 11    5  6  7  8  9 10 11    2  3  4  5  6  7  8   
+15 16 17 18 19 20 21   12 13 14 15 16 17 18   12 13 14 15 16 17 18    9 10 11 12 13 14 15   
+22 23 24 25 26 27 28   19 20 21 22 23 24 25   19 20 21 22 23 24 25   16 17 18 19 20 21 22   
+29 30 31               26 27 28               26 27 28 29 30 31      23 24 25 26 27 28 29   
+                                                                     30                     
+        May                    June                   July                  August          
+ S  M  T  W  T  F  S    S  M  T  W  T  F  S    S  M  T  W  T  F  S    S  M  T  W  T  F  S   
+    1  2  3  4  5  6                1  2  3                      1          1  2  3  4  5   
+ 7  8  9 10 11 12 13    4  5  6  7  8  9 10    2  3  4  5  6  7  8    6  7  8  9 10 11 12   
+14 15 16 17 18 19 20   11 12 13 14 15 16 17    9 10 11 12 13 14 15   13 14 15 16 17 18 19   
+21 22 23 24 25 26 27   18 19 20 21 22 23 24   16 17 18 19 20 21 22   20 21 22 23 24 25 26   
+28 29 30 31            25 26 27 28 29 30      23 24 25 26 27 28 29   27 28 29 30 31         
+                                              30 31                                         
+     September               October                November               December         
+ S  M  T  W  T  F  S    S  M  T  W  T  F  S    S  M  T  W  T  F  S    S  M  T  W  T  F  S   
+                1  2    1  2  3  4  5  6  7             1  2  3  4                   1  2   
+ 3  4  5  6  7  8  9    8  9 10 11 12 13 14    5  6  7  8  9 10 11    3  4  5  6  7  8  9   
+10 11 12 13 14 15 16   15 16 17 18 19 20 21   12 13 14 15 16 17 18   10 11 12 13 14 15 16   
+17 18 19 20 21 22 23   22 23 24 25 26 27 28   19 20 21 22 23 24 25   17 18 19 20 21 22 23   
+24 25 26 27 28 29 30   29 30 31               26 27 28 29 30         24 25 26 27 28 29 30   
+                                                                     31  </pre>
