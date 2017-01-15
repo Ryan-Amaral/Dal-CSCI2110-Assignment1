@@ -4,13 +4,17 @@ import java.util.*;
 
 
 /**
- * 
+ * This class stores information of a single month, it contains some 
+ * functionality for retrieval of this information in a way that is
+ * relevant to a calendar program. Such as storing days in a 2d array.
  * 
  * Assumptions/Restrictions: None.
  * 
- * Noteworthy Features:
+ * Noteworthy Features: Month names are returned fitted in the middle if 
+ * retrieved from the getFittedName method. I added full month names so
+ * the user has the option to use them if desired.
  * 
- * @author Andrew Rau-Chaplin, edited by: Ryan Amaral
+ * @author Andrew Rau-Chaplin, some additions by Ryan Amaral
  *
  */
 public class Month
@@ -79,6 +83,16 @@ public class Month
 		return formattedMonthName;
 	}
 	
+	/**
+	 * Creates a month object from a specific month in a specific year.
+	 * It uses the GregorianCalendar class to get information about the
+	 * specific month. It takes into account leap years and also stores
+	 * all of the days in the month in a 2d array in the format [year]
+	 * [day of week].
+	 * 
+	 * @param year -> The year that the month is from.
+	 * @param monthNum -> The number month of the year.
+	 */
 	public Month(int year, int monthNum){
 		//GregorianCalendar object used to find what day the month starts on
 		GregorianCalendar c = new GregorianCalendar(year, monthNum, 1);
@@ -113,7 +127,7 @@ public class Month
 		}
 	}
 
-
+/*  Not needed for my purposes
 	public static void main(String args[]){
 		Month m = new Month(1999,3);
 		
@@ -121,7 +135,7 @@ public class Month
 		// not be very informative!
 		System.out.println(m); 
 
-	}
+	}*/
 	
 	/**
 	 * Returns a string representing the days in the chosen week. each of

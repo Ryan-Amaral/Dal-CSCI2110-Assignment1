@@ -3,11 +3,15 @@ package calendar;
 import java.util.Scanner; // for user input
 
 /**
- * 
+ * When run, this program prompts the user for the amount of rows, columns,
+ * the year and whether to use full or short month names. The calendar of 
+ * these specifications is printed to the console.
  * 
  * Assumptions/Restrictions: None.
  * 
- * Noteworthy Features:
+ * Noteworthy Features: It asks the user for information of the calendar
+ * they desire. The user gets to select dimensions, the year, and whether
+ * to use long or short month names. All input is validated.
  * 
  * @author Andrew Rau-Chaplin, and Ryan Amaral
  *
@@ -15,6 +19,19 @@ import java.util.Scanner; // for user input
 public class CalPrinter
 {
 	
+	/**
+	 * Prints the calendar of the specified year in the specified dimensions.
+	 * This is done by using nested for loops, and printing one line of the 
+	 * calendar at a time. First the year is printed, the the first row of
+	 * month names, the the day titles, then the first week of the month, 
+	 * then the second week of the month...
+	 * 
+	 * @param year -> The year that the calendar displays.
+	 * @param rows -> The amount of rows of months.
+	 * @param cols -> The amount of columns of months.
+	 * @param isLongNames -> Whether the months are full month names, or 
+	 *  short 3-letter names. E.g.('Jan' vs. 'January').
+	 */
 	public static void printCalendar(int year, int rows, int cols, Boolean isLongNames){
 		
 		if(rows * cols != 12){
@@ -68,6 +85,12 @@ public class CalPrinter
 		
 	}
 	
+	/**
+	 * This function asks the user for details about how the user wants
+	 * the calendar to be displayed, then displays the calendar as such.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{	
 		String input; // temp space used for inputs from user
@@ -139,7 +162,7 @@ public class CalPrinter
 		// now to see if want full or short month names
 		System.out.println("Do you want to use full month names? "
 				+ "Enter 'y' for yes, otherwise the calendar will "
-				+ "use shortened versions of the month names.");
+				+ "use \nshortened versions of the month names.");
 		
 		input = scanner.nextLine();
 		
