@@ -116,6 +116,25 @@ public class SailorCoconuts {
 			return (long)Math.pow(sailors, sailors + 1) - sailors + 1;
 	}
 	
+	/**
+	 * Uses the equation s^(s+1)-s+1 to find the minimum amount of 
+	 * coconuts needed to satisfy the problem with the given amount of 
+	 * sailors. I have not proved this equation, however it holds true for
+	 * all of the values tested with testCoconuts. Just like
+	 * minValidCoconutsEquation except this returns a double to show
+	 * higher values.
+	 * 
+	 * @param sailors -> The amount of sailors in the problem.
+	 * @return Returns the amount of coconuts that is the minimum
+	 *  required amount for the given number of sailors.
+	 */
+	public static double minValidCoconutsEquationDouble(int sailors){
+		if(sailors == 1) // never true with one sailor
+			return -1;
+		else // otherwise there is a solution
+			return Math.pow(sailors, sailors + 1) - sailors + 1;
+	}
+	
 	
 	/**
 	 * Uses the recursive testCoconuts function to find the smallest 
