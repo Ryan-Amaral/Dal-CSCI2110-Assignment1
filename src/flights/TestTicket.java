@@ -1,5 +1,14 @@
 package flights;
 
+
+/**
+ * This is the driver file for the flight booking program. In this test, I
+ * create a sort of dialogue of a flight worker making mistakes and fixing
+ * them with the system.
+ * 
+ * @author Ryan Amaral
+ *
+ */
 public class TestTicket {
 
 	public static void main(String[] args){

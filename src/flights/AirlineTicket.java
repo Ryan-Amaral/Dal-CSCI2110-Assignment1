@@ -11,7 +11,7 @@ package flights;
  * points if a mistake was made) happens automatically in the set passenger
  * method.
  * 
- * @author Ryan
+ * @author Ryan Amaral
  *
  */
 public class AirlineTicket {

@@ -11,7 +11,7 @@ package flights;
  * Noteworthy Features: Filled in default data in default constructor to 
  * avoid NREs.
  * 
- * @author Ryan
+ * @author Ryan Amaral
  *
  */
 public class Flight {
