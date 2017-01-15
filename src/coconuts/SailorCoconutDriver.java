@@ -9,6 +9,12 @@ package coconuts;
  * using the recursive function repeatedly. Then it shows some samples of
  * output for some sailor and coconut values.
  * 
+ * Assumptions/Restrictions: None.
+ * 
+ * Noteworthy Features: I show that my method gets all of the values that
+ * the equation gets, as well as showing some crazy high values of sailors
+ * and coconuts.
+ * 
  * @author Ryan Amaral
  *
  */

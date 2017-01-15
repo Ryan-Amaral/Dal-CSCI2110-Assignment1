@@ -1,6 +1,5 @@
 package flights;
 
-
 /**
  * This class represents a flight at an airport. It has the basic details
  * of the flight including the number, origin, destination, and departure 
@@ -9,7 +8,9 @@ package flights;
  * Assumptions/Restrictions: None.
  * 
  * Noteworthy Features: Filled in default data in default constructor to 
- * avoid NREs.
+ * avoid NREs. The departure fields set method uses regex to validate the
+ * input so it is a valid format. If the validation fails, it reverts to
+ * the previous data.
  * 
  * @author Ryan Amaral
  *
@@ -20,6 +21,14 @@ public class Flight {
 	private String origin;
 	private String destination;
 	private String departure;
+	
+	// the regex pattern to match
+	// of the format mm/dd/yyyy 00:00 XM
+	private final String DEPARTURE_PATTERN = "(0[1-9]|1(0|1|2))\\/"
+			+ "(0[1-9]|(1|2)\\d|3(0|1))\\/\\d{4} "
+			+ "(0\\d|1[0-2]):[0-5]\\d (A|P)M";
+	
+	private final String DEFAULT_DEPARTURE = "01/01/2017 00:00 AM";
 	
 	/**
 	 * @return the flight number
@@ -70,7 +79,11 @@ public class Flight {
 	 * @param departure -> the departure to set
 	 */
 	public void setDeparture(String departure) {
-		this.departure = departure;
+		// if regex matches then set new departure.
+		if(departure.matches(DEPARTURE_PATTERN)){
+			this.departure = departure;
+		}
+		// otherwise value just stays as previous value
 	}
 	
 	/**
@@ -80,7 +93,7 @@ public class Flight {
 		setFlightNumber(-1); // -1 if no number (secret mission or something)
 		setOrigin("Unknown");
 		setDestination("Unknown");
-		setDeparture("00/00/0000 00:00 AM");
+		setDeparture(DEFAULT_DEPARTURE);
 	}
 	
 	/**

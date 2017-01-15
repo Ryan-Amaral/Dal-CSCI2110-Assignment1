@@ -2,7 +2,18 @@ package coconuts;
 
 /**
  * Class SailorCoconuts helps to find what amount of sailors and coconuts
- * are valid for the  sailor coconut problem.
+ * are valid for the sailor coconut problem. Contains functions both to
+ * find a minimum amount of coconuts for a given amount of sailors and
+ * a function that tests if any arbitrary values are valid.
+ * 
+ * Assumptions/Restrictions: None.
+ * 
+ * Noteworthy Features: There are two functions that find the minimum 
+ * amount of coconuts using a equation which is very efficient. If these 
+ * functions were to be used in the recursive function to check if a value
+ * is valid on the first round through, it would speed things up 
+ * significantly. I of course did not include this, as it would defeat the
+ * purpose of the assignment.
  * 
  * @author Ryan Amaral
  *

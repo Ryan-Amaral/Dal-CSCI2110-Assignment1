@@ -4,9 +4,9 @@
 
 <h3>The Sailor Coconut Problem</h3>
 
-<p>This program is about the sailor coconut problem described well here: https://qedinsight.wordpress.com/2011/05/13/the-coconut-problem/. Except in this program it is generalized to be any number of sailors, and it checks if an amount of coconuts is valid for that number of sailors, as well as checking for the minimum amount of coconuts is a valid solution.</p>
+<p>This program is about the sailor coconut problem described well here: https://qedinsight.wordpress.com/2011/05/13/the-coconut-problem/. Except in this program it is generalized to be any number of sailors, and it checks if an amount of coconuts is valid for that number of sailors, as well as checking for the minimum amount of coconuts that is a valid solution.</p>
 
-Sample output (work in progress):
+Sample output:
 <pre>
 Minimum coconuts required for the given amount 
 of sailors (using equation) (-1 means no solution). 
@@ -73,4 +73,55 @@ SUCCESS!!! 2 sailors and 23 coconuts is valid!</pre>
 
 <h3>The Airport Ticket System</h3>
 
-<p>WIP</p>
+<p>This program has nothing special in it, it just has basic functionality and does nothing exciting</p>
+
+Sample output:
+<pre>
+The following is a ticket:
+Ryan, Flight 128, Washington to Lisbon, 02/02/2017 08:00 AM, $589.77
+
+This is the info of that passenger:
+Ryan, 123 Fake Street, #328653, 6 points
+
+Oops, that is the wrong passenger, better change that:
+Bob, Flight 128, Washington to Lisbon, 02/02/2017 08:00 AM, $589.77
+
+Oh wait, the flight is supposed to be PM not AM:
+Bob, Flight 128, Washington to Lisbon, 02/02/2017 08:00 AM, $589.77
+
+The following is the info on the passenger who bought this ticket:
+Bob, 321 Real Street, #23435, 6 points
+
+This is the information on the other customer:
+Ryan, 123 Fake Street, #328653, 0 points
+
+This advanced system automatically dealt with the points 
+appropriately when the passenger on the ticket changed
+
+I just realized that the passengers name is Schlog, not Bob, now to change it:
+Schlog, 321 Real Street, #23435, 6 points
+
+Wow, that is totally the wrong flight, here is the proper one:
+Flight 643, Athens to Cape Town, 01/20/2017 03:00 AM
+
+And the ticket again:
+Schlog, Flight 643, Athens to Cape Town, 01/20/2017 03:00 AM, $589.77
+
+It turns out that Ryan guy actually wants to 
+go to Lisbon, so we will give him a new ticket for that 
+old flight (at a discount). Here is that new ticket for Ryan:
+Ryan, Flight 128, Washington to Lisbon, 02/02/2017 08:00 AM, $204.69
+
+Here you see Ryan's point updated too:
+Ryan, 123 Fake Street, #328653, 0 points
+
+Lets bump Ryan's flight up to be on April 1.
+Ryan, Flight 128, Washington to Lisbon, 02/02/2017 08:00 AM, $204.69
+
+Nothing changed because it was an invalid format.
+The Regex caught it. Lets make it proper now:
+Ryan, Flight 128, Washington to Lisbon, 04/01/2017 05:00 PM, $204.69
+
+Out of curiosity, lets see what a default flight looks like:
+Flight -1, Unknown to Unknown, 01/01/2017 00:00 AM
+Noice</pre>
