@@ -60,6 +60,7 @@ Overflows int datatype after 8 sailors.
 8 sailors requre at-least 134217721 coconuts.
 
 Some sample values below:
+
 FAILURE!!! 2 sailors and 6 coconuts is not valid!
 SUCCESS!!! 2 sailors and 7 coconuts is valid!
 FAILURE!!! 2 sailors and 8 coconuts is not valid!
@@ -69,7 +70,68 @@ SUCCESS!!! 2 sailors and 15 coconuts is valid!
 FAILURE!!! 2 sailors and 16 coconuts is not valid!
 FAILURE!!! 2 sailors and 17 coconuts is not valid!
 FAILURE!!! 2 sailors and 22 coconuts is not valid!
-SUCCESS!!! 2 sailors and 23 coconuts is valid!</pre>
+SUCCESS!!! 2 sailors and 23 coconuts is valid!
+SUCCESS!!! 2 sailors and 31 coconuts is valid!
+SUCCESS!!! 2 sailors and 63 coconuts is valid!
+
+FAILURE!!! 3 sailors and 78 coconuts is not valid!
+SUCCESS!!! 3 sailors and 79 coconuts is valid!
+SUCCESS!!! 3 sailors and 160 coconuts is valid!
+SUCCESS!!! 3 sailors and 322 coconuts is valid!
+FAILURE!!! 3 sailors and 645 coconuts is not valid!
+SUCCESS!!! 3 sailors and 646 coconuts is valid!
+
+SUCCESS!!! 4 sailors and 1021 coconuts is valid!
+SUCCESS!!! 4 sailors and 2045 coconuts is valid!
+SUCCESS!!! 4 sailors and 4093 coconuts is valid!
+SUCCESS!!! 4 sailors and 8189 coconuts is valid!
+FAILURE!!! 4 sailors and 8190 coconuts is not valid!
+FAILURE!!! 4 sailors and 1 coconuts is not valid!
+
+The following shows the first 5 valid amount of 
+coconuts for 2 to 8 pirates.
+
+SUCCESS!!! 2 sailors and 7 coconuts is valid!
+SUCCESS!!! 2 sailors and 15 coconuts is valid!
+SUCCESS!!! 2 sailors and 31 coconuts is valid!
+SUCCESS!!! 2 sailors and 63 coconuts is valid!
+SUCCESS!!! 2 sailors and 127 coconuts is valid!
+
+SUCCESS!!! 3 sailors and 79 coconuts is valid!
+SUCCESS!!! 3 sailors and 160 coconuts is valid!
+SUCCESS!!! 3 sailors and 322 coconuts is valid!
+SUCCESS!!! 3 sailors and 646 coconuts is valid!
+SUCCESS!!! 3 sailors and 1294 coconuts is valid!
+
+SUCCESS!!! 4 sailors and 1021 coconuts is valid!
+SUCCESS!!! 4 sailors and 2045 coconuts is valid!
+SUCCESS!!! 4 sailors and 4093 coconuts is valid!
+SUCCESS!!! 4 sailors and 8189 coconuts is valid!
+SUCCESS!!! 4 sailors and 16381 coconuts is valid!
+
+SUCCESS!!! 5 sailors and 15621 coconuts is valid!
+SUCCESS!!! 5 sailors and 31246 coconuts is valid!
+SUCCESS!!! 5 sailors and 62496 coconuts is valid!
+SUCCESS!!! 5 sailors and 124996 coconuts is valid!
+SUCCESS!!! 5 sailors and 249996 coconuts is valid!
+
+SUCCESS!!! 6 sailors and 279931 coconuts is valid!
+SUCCESS!!! 6 sailors and 559867 coconuts is valid!
+SUCCESS!!! 6 sailors and 1119739 coconuts is valid!
+SUCCESS!!! 6 sailors and 2239483 coconuts is valid!
+SUCCESS!!! 6 sailors and 4478971 coconuts is valid!
+
+SUCCESS!!! 7 sailors and 5764795 coconuts is valid!
+SUCCESS!!! 7 sailors and 11529596 coconuts is valid!
+SUCCESS!!! 7 sailors and 23059198 coconuts is valid!
+SUCCESS!!! 7 sailors and 46118402 coconuts is valid!
+SUCCESS!!! 7 sailors and 92236810 coconuts is valid!
+
+SUCCESS!!! 8 sailors and 134217721 coconuts is valid!
+SUCCESS!!! 8 sailors and 268435449 coconuts is valid!
+SUCCESS!!! 8 sailors and 536870905 coconuts is valid!
+SUCCESS!!! 8 sailors and 1073741817 coconuts is valid!
+SUCCESS!!! 8 sailors and 2147483641 coconuts is valid!</pre>
 
 <h3>The Airport Ticket System</h3>
 
@@ -138,7 +200,8 @@ Please enter in the form '#,#', or '#x#', or '# #'. Rows and columns must multip
 3,4
 Please enter a year:
 2020
-Do you want to use full month names? Enter 'y' for yes, otherwise the calendar will use shortened versions of the month names.
+Do you want to use full month names? Enter 'y' for yes, otherwise the calendar will use shortened 
+versions of the month names.
 Y
 
 Calendar for 2020

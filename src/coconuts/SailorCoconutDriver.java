@@ -13,7 +13,8 @@ package coconuts;
  * 
  * Noteworthy Features: I show that my method gets all of the values that
  * the equation gets, as well as showing some crazy high values of sailors
- * and coconuts.
+ * and coconuts. I also came up with a method to find the first n amount
+ * of coconuts for each amount of sailors.
  * 
  * @author Ryan Amaral
  *
@@ -58,9 +59,9 @@ public class SailorCoconutDriver {
 		
 		
 		
-		System.out.println("\nSome sample values below:");
+		System.out.println("\nSome sample values below:\n");
 		int sailors = 2;
-		int[] coconutAmounts = {6,7,8,9,14,15,16,17,22,23};
+		int[] coconutAmounts = {6,7,8,14,15,16,22,23,31,63};
 		
 		Boolean isGoodValue;
 		
@@ -75,6 +76,70 @@ public class SailorCoconutDriver {
 				System.out.println("FAILURE!!! " + sailors + " sailors and " 
 						+ coconutAmounts[i] + " coconuts is not valid!" );
 		}
+		
+		System.out.println();
+		
+		sailors = 3;
+		coconutAmounts = new int[]{78,79,160,322,645,646};
+		
+		for(int i = 0; i < coconutAmounts.length; i++){
+			isGoodValue = 
+					SailorCoconuts.testCoconuts(sailors, sailors - 1, coconutAmounts[i]);
+			
+			if(isGoodValue)
+				System.out.println("SUCCESS!!! " + sailors + " sailors and " 
+						+ coconutAmounts[i] + " coconuts is valid!" );
+			else
+				System.out.println("FAILURE!!! " + sailors + " sailors and " 
+						+ coconutAmounts[i] + " coconuts is not valid!" );
+		}
+		
+		System.out.println();
+		
+		sailors = 4;
+		coconutAmounts = new int[]{1021,2045,4093,8189,8190, 1};
+		
+		for(int i = 0; i < coconutAmounts.length; i++){
+			isGoodValue = 
+					SailorCoconuts.testCoconuts(sailors, sailors - 1, coconutAmounts[i]);
+			
+			if(isGoodValue)
+				System.out.println("SUCCESS!!! " + sailors + " sailors and " 
+						+ coconutAmounts[i] + " coconuts is valid!" );
+			else
+				System.out.println("FAILURE!!! " + sailors + " sailors and " 
+						+ coconutAmounts[i] + " coconuts is not valid!" );
+		}
+		
+		
+		System.out.println("\nThe following shows the first 5 valid amount of \n"
+				+ "coconuts for 2 to 8 pirates.");
+		
+		int curCoconutAmount;
+		
+		// This nested for loop uses a formula which shows the first 5 amount 
+		// of coconuts for 2 to 8 pirates.
+		// This is a noteworthy part.
+		for(int s = 2; s < 9; s++){
+			System.out.println();
+			curCoconutAmount = (int)SailorCoconuts.minValidCoconutsEquation(s);
+			for(int i = 0; i < 5; i++){
+				
+				if(i > 0)
+					curCoconutAmount = curCoconutAmount * 2 + s - 1;
+				
+				isGoodValue = 
+						SailorCoconuts.testCoconuts(s, s - 1, curCoconutAmount);
+				
+				if(isGoodValue)
+					System.out.println("SUCCESS!!! " + s + " sailors and " 
+							+ curCoconutAmount + " coconuts is valid!" );
+				else
+					System.out.println("FAILURE!!! " + s + " sailors and " 
+							+ curCoconutAmount + " coconuts is not valid!" );
+			}
+		}
+		
 	}
 
 }
