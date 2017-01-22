@@ -171,6 +171,8 @@ public class CalPrinter
 		else
 			isFullNames = false;
 		
+		scanner.close();
+		
 		System.out.println(); // extra blank line
 		
 		//Test printing a Calendar

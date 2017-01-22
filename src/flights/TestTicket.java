@@ -81,7 +81,7 @@ public class TestTicket {
 		
 		System.out.println(ticket2.toString());
 		
-		System.out.println("\nHere you see Ryan's point updated too:");
+		System.out.println("\nHere you see Ryan's points updated too:");
 		System.out.println(customer1.toString());
 		
 		System.out.println("\nLets bump Ryan's flight up to be on April 1.");

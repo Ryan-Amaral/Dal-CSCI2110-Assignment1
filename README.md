@@ -174,7 +174,7 @@ go to Lisbon, so we will give him a new ticket for that
 old flight (at a discount). Here is that new ticket for Ryan:
 Ryan, Flight 128, Washington to Lisbon, 02/02/2017 08:00 AM, $204.69
 
-Here you see Ryan's point updated too:
+Here you see Ryan's points updated too:
 Ryan, 123 Fake Street, #328653, 0 points
 
 Lets bump Ryan's flight up to be on April 1.
