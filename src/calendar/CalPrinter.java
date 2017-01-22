@@ -118,7 +118,7 @@ public class CalPrinter
 		// repeatedly ask for input until it is valid
 		while(!isValid){
 			System.out.println("Please enter in the form '#,#', or '#x#', "
-					+ "or '# #'. Rows and columns must multiply to equal 12:");
+					+ "or '# #'. Rows and columns must \nmultiply to equal 12:");
 			input = scanner.nextLine();
 			if(input.matches(dimensionPattern)){
 				String tmpStrs[] = input.split("(,|x|X| )");
@@ -161,8 +161,8 @@ public class CalPrinter
 		
 		// now to see if want full or short month names
 		System.out.println("Do you want to use full month names? "
-				+ "Enter 'y' for yes, otherwise the calendar will "
-				+ "use \nshortened versions of the month names.");
+				+ "Enter 'y' for yes, otherwise the calendar \n"
+				+ "will use shortened versions of the month names.");
 		
 		input = scanner.nextLine();
 		

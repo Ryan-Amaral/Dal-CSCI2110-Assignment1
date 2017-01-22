@@ -21,6 +21,11 @@ package coconuts;
  */
 public class SailorCoconutDriver {
 
+	/**
+	 * Runs all test stuff for the SailorCoconutClass.
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		System.out.println("Minimum coconuts required for the given amount \n"
